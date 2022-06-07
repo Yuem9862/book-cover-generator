@@ -44,6 +44,7 @@ Variables
   --max-width: 1170px;
   --fixed-width: 620px;
 }
+
 /*
 =============== 
 Global Styles
@@ -119,20 +120,35 @@ p {
     line-height: 1;
   }
 }
-/*  global classes */
-
-/* section */
-.header {
-  width: 90vw;
-  margin: 0 auto;
-  max-width: var(--max-width);
-  text-align: center;
-}
 
 img {
   width: 200px;
   height: 200px;
   object-fit: cover;
+}
+
+.section-center {
+  width: 75vw;
+  margin: 0 auto;
+  max-width: var(--max-width);
+}
+
+@media screen and (min-width: 992px) {
+  .section-center {
+    width: 95vw;
+  }
+}
+
+/*
+=============== 
+Header
+===============
+*/
+
+.header {
+  margin: 0 auto;
+  max-width: var(--max-width);
+  text-align: center;
 }
 
 @media screen and (min-width: 992px) {
@@ -143,32 +159,52 @@ img {
 
 /*
 =============== 
-Markdown
+Generator
 ===============
 */
-.markdown {
-  padding: 4rem;
-  display: grid;
-  row-gap: 4rem;
+
+.generator {
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem auto;
 }
-.input {
-  border-color: transparent;
-  border-radius: var(--radius);
-  font-size: 1.2rem;
-  line-height: 2;
-  box-shadow: var(--dark-shadow);
-  min-height: 30vh;
-}
-.input,
-.result {
-  padding: 1rem 2rem;
+.generator-form {
+  display: flex;
+  flex-direction: column;
 }
 
-@media screen and (min-width: 992px) {
-  .markdown {
-    min-height: 100vh;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 4rem;
-  }
+label {
+  font-size: 0.875rem;
+  text-transform: capitalize;
 }
-/* unique styles */
+
+input {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  padding: 0.75rem;
+  width: 150%;
+}
+
+::placeholder {
+  text-transform: capitalize;
+}
+
+.btn {
+  margin: 1rem auto;
+  padding: 1rem;
+  width: 150%;
+  text-transform: capitalize;
+  color: var(--clr-white);
+  font-size: 1.5rem;
+  background-color: var(--clr-primary-5);
+  border-radius: 3px;
+  border-width: 0px;
+}
+.btn:hover {
+  background-color: var(--clr-primary-4);
+}
+/*
+=============== 
+Reference
+===============
+*/

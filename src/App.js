@@ -6,14 +6,14 @@ import Colours from "./Colours";
 function App() {
   return (
     <main>
-      <header className='header'>
+      <header className='header '>
         <h1>O'RLY Cover Generator</h1>
       </header>
-      <section className='generator'>
+      <section className='generator section-center'>
         <Form />
         <Cover />
       </section>
-      <section className='reference'>
+      <section className='reference section-center'>
         <Animals />
         <Colours />
       </section>
