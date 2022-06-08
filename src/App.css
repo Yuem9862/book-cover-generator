@@ -227,7 +227,7 @@ input[type="color"] {
   margin: 1.2rem 0;
   height: 640px;
   width: 430px;
-  box-shadow: 5px 5px 10px var(--clr-grey-5);
+  box-shadow: var(--dark-shadow);
   border-radius: 2px;
 }
 
@@ -310,8 +310,37 @@ Animals and Colours
 
 .animal-card-img {
   background-color: var(--clr-white);
+  border-radius: 4px;
+}
+
+.animal-card-img:hover {
+  box-shadow: var(--light-shadow);
+  cursor: pointer;
 }
 
 .animal-card-num {
   text-align: center;
+}
+
+.icon {
+  height: 30px;
+}
+
+footer {
+  background-color: var(--clr-black);
+  margin-top: 5rem;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+footer p {
+  color: var(--clr-white);
+}
+
+.link {
+  text-decoration: underline;
+}
+
+.link:visited {
+  color: var(--clr-white);
 }

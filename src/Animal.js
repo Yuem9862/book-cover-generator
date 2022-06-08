@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  birdnest,
+  // birdnest,
   // butterfly,
   // frog,
   jellyfish,
