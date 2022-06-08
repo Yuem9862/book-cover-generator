@@ -3,6 +3,7 @@ import Form from "./Form";
 import Cover from "./Cover";
 import Animals from "./Animals";
 import Footer from "./Footer";
+import data from "./data";
 function App() {
   return (
     <main>
@@ -14,7 +15,7 @@ function App() {
         <Cover />
       </section>
       <section className='reference section-center'>
-        <Animals />
+        <Animals animals={data} />
       </section>
       <Footer />
     </main>

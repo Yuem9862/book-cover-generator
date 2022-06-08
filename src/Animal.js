@@ -1,17 +1,12 @@
 import React from "react";
-import {
-  // birdnest,
-  // butterfly,
-  // frog,
-  jellyfish,
-  // opah,
-  // pterodactyl,
-} from "./animals/animals";
-function Animal() {
+
+function Animal({ data }) {
+  const { id, name, url } = data;
+  console.log(name);
   return (
     <article>
-      <img className='animal-card-img' src={jellyfish} alt='placeholder' />
-      <p className='animal-card-num'>1</p>
+      <img className='animal-card-img' src={url} alt={name} />
+      <p className='animal-card-num'>{id}</p>
     </article>
   );
 }

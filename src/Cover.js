@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  birdnest,
-  // butterfly,
-  // frog,
-  // jellyfish,
-  // opah,
-  // pterodactyl,
-} from "./animals/animals";
+
 function Cover() {
   return (
     <>
@@ -17,7 +10,11 @@ function Cover() {
             <p>Top Text</p>
           </div>
           <div className='picture'>
-            <img src={birdnest} className='animal-pic' alt='animal' />
+            <img
+              src='https://etc.usf.edu/clipart/3100/3126/butterfly_2_lg.gif'
+              className='animal-pic'
+              alt='animal'
+            />
           </div>
           <div className='title colour-1'>
             <p>Title Text</p>
