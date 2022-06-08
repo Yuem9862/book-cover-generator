@@ -1,7 +1,6 @@
 import React from "react";
-
 function Animals() {
-  return <div>Animals</div>;
+  return <>Animals</>;
 }
 
 export default Animals;

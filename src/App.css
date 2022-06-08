@@ -135,7 +135,7 @@ img {
 
 @media screen and (min-width: 992px) {
   .section-center {
-    width: 95vw;
+    width: 65vw;
   }
 }
 
@@ -165,12 +165,16 @@ Generator
 
 .generator {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   margin: 2rem auto;
+  gap: 2rem;
 }
-.generator-form {
+
+.form {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 label {
@@ -179,10 +183,9 @@ label {
 }
 
 input {
-  margin-bottom: 1rem;
+  margin-bottom: 1.1rem;
   font-size: 1rem;
   padding: 0.75rem;
-  width: 150%;
 }
 
 ::placeholder {
@@ -192,7 +195,7 @@ input {
 .btn {
   margin: 1rem auto;
   padding: 1rem;
-  width: 150%;
+  width: 100%;
   text-transform: capitalize;
   color: var(--clr-white);
   font-size: 1.5rem;
@@ -203,8 +206,82 @@ input {
 .btn:hover {
   background-color: var(--clr-primary-4);
 }
-/*
-=============== 
-Reference
-===============
-*/
+
+.cover-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cover {
+  background-color: var(--clr-white);
+  margin: 1.2rem 0;
+  height: 640px;
+  width: 430px;
+  box-shadow: 5px 5px 10px var(--clr-grey-5);
+  border-radius: 2px;
+}
+
+@media screen and (min-width: 992px) {
+  .generator {
+    flex-direction: row;
+  }
+}
+
+/* ----------- book cover ----------*/
+
+.top-colour-bar {
+  margin: 0 auto;
+  margin: 0 0.75rem;
+  height: 8px;
+}
+
+.top-text {
+  text-align: center;
+  font-size: 0.875rem;
+}
+.picture {
+  text-align: center;
+}
+
+.animal-pic {
+  width: 350px;
+  height: 320px;
+  object-fit: contain;
+}
+
+.title {
+  color: var(--clr-white);
+  height: 120px;
+  margin: 0 0.75rem;
+  padding: 1.75rem 0.75rem;
+}
+
+.title p {
+  font-size: 3.5rem;
+  color: var(--clr-white);
+}
+
+.guide {
+  text-align: end;
+  margin: 0.3rem 1.5rem;
+  font-size: 1.2rem;
+}
+
+.pubinfo {
+  margin: 3.75rem 1.5rem 0.5rem;
+  padding: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.publisher {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+.colour-1 {
+  background-color: var(--clr-green-dark);
+}
+/* ----------- end of book cover ----------*/
