@@ -192,6 +192,10 @@ select {
   padding: 0.75rem;
 }
 
+select {
+  text-transform: capitalize;
+}
+
 input[type="color"] {
   height: 3rem;
   padding: 0.3rem;
@@ -272,9 +276,17 @@ input[type="color"] {
 }
 
 .guide {
-  text-align: end;
   margin: 0.3rem 1.5rem;
   font-size: 1.2rem;
+}
+.right {
+  text-align: end;
+}
+.left {
+  text-align: start;
+}
+.center {
+  text-align: center;
 }
 
 .pubinfo {

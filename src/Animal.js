@@ -2,7 +2,6 @@ import React from "react";
 
 function Animal({ data }) {
   const { id, name, url } = data;
-  console.log(name);
   return (
     <article>
       <img className='animal-card-img' src={url} alt={name} />
