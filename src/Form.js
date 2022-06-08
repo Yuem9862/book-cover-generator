@@ -26,9 +26,9 @@ function Form() {
         <input id='animals' type='number' min='1' max='6' />
 
         <label htmlFor='colours'>colour code</label>
-        <input id='colours' type='number' min='1' max='6' />
+        <input id='colours' type='color' value='#25BB32' />
 
-        <button type='button' class='btn'>
+        <button type='button' className='btn'>
           generate cover
         </button>
       </form>

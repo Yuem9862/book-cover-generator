@@ -1,5 +1,12 @@
 import React from "react";
-import birdnest from "./animals/birdnest.gif";
+import {
+  birdnest,
+  // butterfly,
+  // frog,
+  // jellyfish,
+  // opah,
+  // pterodactyl,
+} from "./animals/animals";
 function Cover() {
   return (
     <>
@@ -23,7 +30,7 @@ function Cover() {
             <p className='author'>Author</p>
           </div>
         </div>
-        <button type='button' class='btn'>
+        <button type='button' className='btn'>
           download
         </button>
       </section>

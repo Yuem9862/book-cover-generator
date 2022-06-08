@@ -2,7 +2,6 @@ import "./App.css";
 import Form from "./Form";
 import Cover from "./Cover";
 import Animals from "./Animals";
-import Colours from "./Colours";
 function App() {
   return (
     <main>
@@ -15,7 +14,6 @@ function App() {
       </section>
       <section className='reference section-center'>
         <Animals />
-        <Colours />
       </section>
       <footer>footer</footer>
     </main>

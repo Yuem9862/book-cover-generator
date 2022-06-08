@@ -124,7 +124,7 @@ p {
 img {
   width: 200px;
   height: 200px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .section-center {
@@ -132,7 +132,10 @@ img {
   margin: 0 auto;
   max-width: var(--max-width);
 }
-
+.section-center h3 {
+  margin: 3rem;
+  text-align: center;
+}
 @media screen and (min-width: 992px) {
   .section-center {
     width: 65vw;
@@ -188,6 +191,10 @@ input {
   padding: 0.75rem;
 }
 
+input[type="color"] {
+  height: 3rem;
+  padding: 0.3rem;
+}
 ::placeholder {
   text-transform: capitalize;
 }
@@ -205,6 +212,7 @@ input {
 }
 .btn:hover {
   background-color: var(--clr-primary-4);
+  cursor: pointer;
 }
 
 .cover-wrapper {
@@ -248,7 +256,6 @@ input {
 .animal-pic {
   width: 350px;
   height: 320px;
-  object-fit: contain;
 }
 
 .title {
@@ -285,3 +292,26 @@ input {
   background-color: var(--clr-green-dark);
 }
 /* ----------- end of book cover ----------*/
+
+/*
+=============== 
+Animals and Colours
+===============
+*/
+
+.animals-container {
+  margin: 1.5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.animal-card-img {
+  background-color: var(--clr-white);
+}
+
+.animal-card-num {
+  text-align: center;
+}
