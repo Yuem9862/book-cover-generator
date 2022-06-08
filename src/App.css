@@ -185,7 +185,8 @@ label {
   text-transform: capitalize;
 }
 
-input {
+input,
+select {
   margin-bottom: 1.1rem;
   font-size: 1rem;
   padding: 0.75rem;

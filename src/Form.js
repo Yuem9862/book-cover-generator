@@ -11,7 +11,11 @@ function Form() {
         <input id='guide' type='text' placeholder='required' />
 
         <label htmlFor='placement'>guide text placement</label>
-        <input id='placement' type='text' placeholder='required' />
+        <select id='placement'>
+          <option value='right'>right</option>
+          <option value='center'>center</option>
+          <option value='left'>left</option>
+        </select>
 
         <label htmlFor='author'>author</label>
         <input id='author' type='text' placeholder='required' />
