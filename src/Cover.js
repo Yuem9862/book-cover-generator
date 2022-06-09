@@ -19,10 +19,8 @@ function Cover({
   //generate the cover image
   const printRef = useRef();
   const handleDownloadImage = async () => {
-    console.log("download begins");
-
     const element = printRef.current;
-    const canvas = await html2canvas(element, { allowTaint: true });
+    const canvas = await html2canvas(element);
 
     const data = canvas.toDataURL("image/jpg");
     const link = document.createElement("a");

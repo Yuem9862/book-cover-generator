@@ -4,6 +4,10 @@ import Animals from "./Animals";
 import Footer from "./Footer";
 import data from "./data";
 function App() {
+  console.log(
+    "%c Time to troll your coworker with a O'RLY book! :p -- Yuemin",
+    "background: #222; color: #bada55"
+  );
   return (
     <main>
       <header className='header'>
