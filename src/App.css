@@ -247,20 +247,19 @@ input[type="color"] {
 .top-colour-bar {
   margin: 0 auto;
   margin: 0 0.75rem;
-  height: 8px;
+  height: 10px;
 }
 
 .top-text {
   text-align: center;
   font-size: 0.875rem;
 }
-.picture {
-  text-align: center;
-}
 
 .animal-pic {
   width: 350px;
   height: 320px;
+  display: block;
+  margin: 0 auto;
 }
 
 .title {

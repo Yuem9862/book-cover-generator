@@ -2,32 +2,37 @@ const animals = [
   {
     id: 1,
     name: "butterfly",
-    url: "https://etc.usf.edu/clipart/3100/3126/butterfly_2_lg.gif",
+    url: window.location.origin + "/animals/butterfly.gif",
   },
   {
     id: 2,
     name: "birdnest",
-    url: "https://etc.usf.edu/clipart/54900/54929/54929_birdnest_lg.gif",
+    url: window.location.origin + "/animals/birdnest.gif",
   },
   {
     id: 3,
     name: "Pterodactyl",
-    url: "https://etc.usf.edu/clipart/49900/49926/49926_pterodactyl_lg.gif",
+    url: window.location.origin + "/animals/pterodactyl.gif",
   },
   {
     id: 4,
     name: "Jellyfish",
-    url: "https://etc.usf.edu/clipart/7000/7070/jellyfish_7070_lg.gif",
+    url: window.location.origin + "/animals/jellyfish.gif",
   },
   {
     id: 5,
     name: "Gemul Deer",
-    url: "https://etc.usf.edu/clipart/63100/63114/63114_gemul_deer_lg.gif",
+    url: window.location.origin + "/animals/deer.gif",
   },
   {
     id: 6,
+    name: "Frog",
+    url: window.location.origin + "/animals/frog.gif",
+  },
+  {
+    id: 7,
     name: "Angler",
-    url: "https://etc.usf.edu/clipart/53300/53398/53398_angler_lg.gif",
+    url: window.location.origin + "/animals/angler.gif",
   },
 ];
 

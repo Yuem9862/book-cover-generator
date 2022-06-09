@@ -20,7 +20,7 @@ function Cover({
   const printRef = useRef();
   const handleDownloadImage = async () => {
     const element = printRef.current;
-    const canvas = await html2canvas(element);
+    const canvas = await html2canvas(element, { scrollX: 0, scrollY: 0 });
 
     const data = canvas.toDataURL("image/jpg");
     const link = document.createElement("a");
@@ -45,16 +45,8 @@ function Cover({
             className='top-colour-bar'
             style={{ backgroundColor: `${colour}` }}
           ></div>
-          <div className='top-text'>
-            <p>{topText}</p>
-          </div>
-          <div className='picture'>
-            <img
-              src={getImage(image)}
-              className='animal-pic picture'
-              alt='animal'
-            />
-          </div>
+          <p className='top-text'>{topText}</p>
+          <img src={getImage(image)} className='animal-pic' alt='animal' />
           <div className='title' style={{ backgroundColor: `${colour}` }}>
             <p>{title}</p>
           </div>

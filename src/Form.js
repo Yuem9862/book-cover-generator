@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Cover from "./Cover";
-
+import data from "./data";
 function Form() {
   const defaultInfo = {
     title: "JavaScript Is Weird",
@@ -12,6 +12,8 @@ function Form() {
     image: 3,
     colour: "#bc2929",
   };
+
+  const imageNumber = data.length;
   const [info, setInfo] = useState(defaultInfo);
 
   const handleSubmit = (event) => {
@@ -88,7 +90,7 @@ function Form() {
           id='animals'
           type='number'
           min='1'
-          max='6'
+          max={imageNumber}
           onChange={(event) => {
             console.log(event.target.value);
             setInfo({ ...info, image: parseInt(event.target.value) });
