@@ -6,7 +6,7 @@ import data from "./data";
 function App() {
   return (
     <main>
-      <header className='header '>
+      <header className='header'>
         <h1>O'RLY Cover Generator</h1>
       </header>
       <section className='generator section-center'>

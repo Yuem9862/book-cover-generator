@@ -6,7 +6,7 @@ function Animals({ animals }) {
       <h3>animal codes</h3>
       <div className='animals-container'>
         {animals.map((animal) => {
-          return <Animal id={animal.id} data={animal} />;
+          return <Animal key={animal.id} data={animal} />;
         })}
       </div>
     </section>

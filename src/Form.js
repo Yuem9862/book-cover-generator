@@ -1,16 +1,15 @@
 import React, { useState } from "react";
 import Cover from "./Cover";
-import Animals from "./Animals";
-import data from "./data";
+
 function Form() {
   const defaultInfo = {
-    title: "Title Text",
-    guide: "Guide Text",
+    title: "JavaScript Is Weird",
+    guide: "Why 0.1 + 0.2 !== 0.3",
     placement: "right",
-    author: "Author",
-    topText: "Top Text",
+    author: "Yuemin",
+    topText: "100 days of blood, sweat and tears",
     publisher: "O'RLY",
-    image: 2,
+    image: 3,
     colour: "#bc2929",
   };
   const [info, setInfo] = useState(defaultInfo);
