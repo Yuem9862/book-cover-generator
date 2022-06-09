@@ -1,5 +1,5 @@
-import React from "react";
-
+import React, { useEffect } from "react";
+import data from "./data";
 function Cover({
   title,
   guide,
@@ -8,27 +8,28 @@ function Cover({
   topText,
   publisher,
   colour,
+  image,
 }) {
-  //todo: fix the colour
-  // console.log(colour);
+  console.log(colour);
+  const getImage = (index) => {
+    return data.find((element) => element.id === index).url;
+  };
 
-  //useEffect when subitting the form
   return (
     <>
       <section className='cover-wrapper'>
         <div className='cover'>
-          <div className='top-colour-bar colour-1'></div>
+          <div
+            className='top-colour-bar'
+            style={{ backgroundColor: `${colour}` }}
+          ></div>
           <div className='top-text'>
             <p>{topText}</p>
           </div>
           <div className='picture'>
-            <img
-              src='https://etc.usf.edu/clipart/3100/3126/butterfly_2_lg.gif'
-              className='animal-pic'
-              alt='animal'
-            />
+            <img src={getImage(image)} className='animal-pic' alt='animal' />
           </div>
-          <div className='title colour-1'>
+          <div className='title' style={{ backgroundColor: `${colour}` }}>
             <p>{title}</p>
           </div>
           <div className={`guide + ${placement}`}>

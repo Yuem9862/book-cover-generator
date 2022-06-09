@@ -12,7 +12,7 @@ function App() {
       <section className='generator section-center'>
         <Form />
       </section>
-      <section className='reference section-center'>
+      <section className='section-center'>
         <Animals animals={data} />
       </section>
       <Footer />

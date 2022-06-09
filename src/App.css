@@ -301,9 +301,7 @@ input[type="color"] {
   text-transform: uppercase;
   font-size: 1.5rem;
 }
-.colour-1 {
-  background-color: var(--clr-green-dark);
-}
+
 /* ----------- end of book cover ----------*/
 
 /*
@@ -328,7 +326,7 @@ Animals and Colours
 
 .animal-card-img:hover {
   box-shadow: var(--light-shadow);
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .animal-card-num {

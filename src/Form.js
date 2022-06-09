@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import Cover from "./Cover";
-
+import Animals from "./Animals";
+import data from "./data";
 function Form() {
   const defaultInfo = {
     title: "Title Text",
     guide: "Guide Text",
-    placement: "Right",
+    placement: "right",
     author: "Author",
     topText: "Top Text",
     publisher: "O'RLY",
-    image: 1,
-    colour: "3BA544",
+    image: 2,
+    colour: "#bc2929",
   };
   const [info, setInfo] = useState(defaultInfo);
 
@@ -90,7 +91,8 @@ function Form() {
           min='1'
           max='6'
           onChange={(event) => {
-            setInfo({ ...info, image: event.target.value });
+            console.log(event.target.value);
+            setInfo({ ...info, image: parseInt(event.target.value) });
           }}
         />
 
@@ -102,11 +104,15 @@ function Form() {
             setInfo({ ...info, colour: event.target.value });
           }}
         />
-
-        {/* todo: generate a random cover
-        <button type='submt' className='btn'>
-          random
-        </button> */}
+        <button
+          type='reset'
+          className='btn'
+          onClick={() => {
+            setInfo(defaultInfo);
+          }}
+        >
+          clear
+        </button>
       </form>
 
       <Cover {...info} />
