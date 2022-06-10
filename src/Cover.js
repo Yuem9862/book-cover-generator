@@ -1,6 +1,7 @@
-import React, { useRef } from "react";
+import React, { useCallback, useRef } from "react";
 import data from "./data";
-import html2canvas from "html2canvas";
+import { toPng } from "html-to-image";
+
 function Cover({
   title,
   guide,
@@ -18,24 +19,22 @@ function Cover({
 
   //generate the cover image
   const printRef = useRef();
-  const handleDownloadImage = async () => {
-    const element = printRef.current;
-    const canvas = await html2canvas(element, { scrollX: 0, scrollY: 0 });
-
-    const data = canvas.toDataURL("image/jpg");
-    const link = document.createElement("a");
-
-    if (typeof link.download === "string") {
-      link.href = data;
-      link.download = "cover.jpg";
-
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    } else {
-      window.open(data);
+  const onButtonClick = useCallback(() => {
+    if (printRef.current === null) {
+      return;
     }
-  };
+
+    toPng(printRef.current, { cacheBust: true })
+      .then((dataUrl) => {
+        const link = document.createElement("a");
+        link.download = "my-image-name.png";
+        link.href = dataUrl;
+        link.click();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, [printRef]);
 
   return (
     <>
@@ -50,7 +49,7 @@ function Cover({
           <div className='title' style={{ backgroundColor: `${colour}` }}>
             <p>{title}</p>
           </div>
-          <div className={`guide + ${placement}`}>
+          <div className={`guide ${placement}`}>
             <p>{guide}</p>
           </div>
           <div className='pubinfo'>
@@ -58,7 +57,7 @@ function Cover({
             <p className='author'>{author}</p>
           </div>
         </div>
-        <button type='button' className='btn' onClick={handleDownloadImage}>
+        <button type='button' className='btn' onClick={onButtonClick}>
           download
         </button>
       </section>
